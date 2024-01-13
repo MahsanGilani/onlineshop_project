@@ -112,10 +112,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fa-ir'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
-
+USE_L10N = True  # defines whether a Django project should format numbers and dates according to project's locale
 USE_TZ = True
 
 
