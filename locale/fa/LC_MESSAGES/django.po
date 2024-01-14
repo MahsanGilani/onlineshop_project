@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-14 16:26+0330\n"
+"POT-Creation-Date: 2024-01-14 16:43+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,15 +38,29 @@ msgstr "حذف شده در"
 msgid "Restored at"
 msgstr "بازگردانی شده در"
 
+#: apps/products/models.py:7
+#, fuzzy
+#| msgid "Category"
+msgid "Category Name"
+msgstr "نام دسته بندی"
+
 #: apps/products/models.py:8
-msgid "category_image"
+#, fuzzy
+#| msgid "category_image"
+msgid "Category image"
 msgstr "عکس های دسته بندی ها"
 
-#: apps/products/models.py:15
+#: apps/products/models.py:10
+#, fuzzy
+#| msgid "Categories"
+msgid "Sub Categories"
+msgstr "دسته بندی های داخلی"
+
+#: apps/products/models.py:16
 msgid "Category"
 msgstr "دسته بندی"
 
-#: apps/products/models.py:16
+#: apps/products/models.py:17
 msgid "Categories"
 msgstr "دسته بندی ها"
 
