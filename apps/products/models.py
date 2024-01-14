@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 from django.utils.text import slugify
 
 
-# Create your models here.
 class Category(models.Model):
     category_name = models.CharField(max_length=100, verbose_name=_('Category Name'))
     category_image = models.ImageField(verbose_name=_('Category image'), upload_to='categories_img/', height_field=None,
@@ -16,6 +15,10 @@ class Category(models.Model):
         ordering = ('category_name',)
         verbose_name = _('Category')
         verbose_name_plural = _('Categories')
+        # indexes, improves the speed of searches and filters related to that model in the database.
+        indexes = [
+            models.Index(fields=['category_name']),
+        ]
 
     def save(self, *args, **kwargs):
         if not self.slug:
