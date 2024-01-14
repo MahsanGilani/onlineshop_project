@@ -112,6 +112,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'fa-ir'
+LANGUAGES = [
+    ('fa', 'Persian'),
+    ('en', 'English'),
+]
 
 TIME_ZONE = 'Asia/Tehran'
 
@@ -119,7 +123,9 @@ USE_I18N = True
 USE_L10N = True  # defines whether a Django project should format numbers and dates according to project's locale
 USE_TZ = True
 
-
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
