@@ -4,6 +4,13 @@ from django.utils.text import slugify
 from apps.core.models import BaseModel
 
 
+# Manger
+class ProductManger(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(is_active=True)
+
+
+# Models
 class Category(BaseModel):
     # data fields
     category_name = models.CharField(max_length=100, verbose_name=_('Category Name'))
@@ -52,6 +59,10 @@ class Product(BaseModel):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name='products', null=True,
                                  blank=True)  # null is for database, blank is for panel
 
+    # manager
+    objects = models.Manager()
+    actives = ProductManger()
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.product_name)
@@ -65,6 +76,7 @@ class Product(BaseModel):
         indexes = [
             models.Index(fields=['product_name']),
         ]
+        default_manager_name = 'actives'
 
     def __str__(self):
         return self.product_name
