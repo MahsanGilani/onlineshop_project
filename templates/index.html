@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="fa">
     <head>
@@ -6,17 +8,17 @@
     <title>ReservQ - قالب HTML رزرو رستوران </title>
 
     <!-- fave-icon  -->
-    <link rel="shortcut icon" href="images/fave.png" type="image/png">
+    <link rel="shortcut icon" href={% static "images/fave.png" %} type="image/png">
 
     <!-- font awesome cdn link  -->
 
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/venobox.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href={% static "css/all.min.css" %}>
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "css/venobox.min.css" %}>
+    <link rel="stylesheet" href={% static "css/aos.css" %}>
+    <link rel="stylesheet" href={% static "css/slick.css" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    <link rel="stylesheet" href={% static "css/responsive.css" %}>
 </head>
 
 <body>
@@ -2525,13 +2527,13 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/venobox.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.shuffle.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src={% static "js/jquery-3.6.3.min.js" %}></script>
+    <script src={% static "js/venobox.min.js" %}></script>
+    <script src={% static "js/aos.js" %}></script>
+    <script src={% static "js/slick.min.js" %}></script>
+    <script src={% static "js/jquery.shuffle.min.js" %}></script>
+    <script src={% static "js/bootstrap.bundle.min.js" %}></script>
+    <script src={% static "js/custom.js" %}></script>
 
 
 </body>
