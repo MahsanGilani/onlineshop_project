@@ -20,7 +20,7 @@ class Category(BaseModel):
 
     # relations
     sub_category = models.ForeignKey('self', verbose_name=_('Sub Categories'), on_delete=models.CASCADE,
-                                     related_name='sub_categories')
+                                     related_name='sub_categories', null=True, blank=True)
 
     class Meta:
         ordering = ('category_name',)  # It does not apply anything to the database
