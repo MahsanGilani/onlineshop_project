@@ -53,7 +53,7 @@ class Product(BaseModel):
     description = models.TextField(verbose_name=_('Product Description'), null=True, blank=True)
     slug = models.SlugField(verbose_name=_('Slug'), max_length=250, unique=True, blank=True)
     thumbnail = models.ImageField(verbose_name=_('Product thumbnail'), upload_to='product_img/', height_field=None,
-                                  width_field=None)
+                                  width_field=None, null=True, blank=True)
 
     # relations
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name='products', null=True,
