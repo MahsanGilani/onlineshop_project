@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block 'title' %} Home {% endblock %}
+
+{% block 'content' %}
+    {% include 'partials/banner.html' %}
+    {% include 'partials/categories-part.html' %}
+    {% include 'partials/promotions.html' %}
+    {% include 'partials/traditional.html' %}
+    {% include 'partials/process.html' %}
+    {% include 'partials/popular.html' %}
+    {% include 'partials/customer_cm.html' %}
+    {% include 'partials/questions.html' %}
+{% endblock %}
+
