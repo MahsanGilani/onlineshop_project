@@ -4,7 +4,7 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'products/index.html')
 
 
 def products_list(request):
