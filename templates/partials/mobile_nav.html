@@ -1,0 +1,56 @@
+{% load static %}
+
+<!-- mobile navigation start -->
+<header class="mobile-header">
+    <div class="container-full">
+        <div class="mobile-header__container">
+            <div class="p-left">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src={% static "images/logo-header.svg" %} alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="p-right">
+                <button id="nav-opn-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- offcanvas -->
+<aside id="offcanvas-nav">
+    <nav class="m-nav">
+        <button id="nav-cls-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="logo">
+            <a href="">
+                <img src={% static "images/logo-header.svg" %} alt="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown"><a href="#">خانه </a>
+    
+                <ul class="d-menu">
+                    <li><a href="index.html">خانه-۰۱ </a> </li>
+                    <li><a href="index-2.html">خانه-۰۲</a></li>
+                </ul>
+    
+    
+            </li>
+            <li><a href="all-food.html">منو</a></li>
+            <li>
+                <a href="about.html">درباره ما</a>
+            </li>
+            <li><a href="contact.html">تماس با ما</a></li>
+            <li class="dropdown"><a href="#">وبلاگ</a>
+    
+                <ul class="d-menu">
+                    <li><a href="blog.html">وبلاگ </a> </li>
+                    <li><a href="blog-details.html">وبلاگ-جزئیات</a></li>
+                </ul>
+            </li>
+        </ul>
+    
+    </nav>
+</aside>
