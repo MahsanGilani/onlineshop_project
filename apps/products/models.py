@@ -15,7 +15,7 @@ class Category(BaseModel):
     # data fields
     category_name = models.CharField(max_length=100, verbose_name=_('Category Name'))
     category_image = models.ImageField(verbose_name=_('Category image'), upload_to='categories_img/', height_field=None,
-                                       width_field=None)
+                                       width_field=None, null=True, blank=True)
     slug = models.SlugField(verbose_name=_('Slug'), max_length=250, unique=True, blank=True)
 
     # relations
