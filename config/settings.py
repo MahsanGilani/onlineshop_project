@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import locale
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third party apps
+    'django_jalali',
     'debug_toolbar',
 
     # My Apps
@@ -116,6 +118,8 @@ LANGUAGES = [
 ]
 
 TIME_ZONE = 'Asia/Tehran'
+
+locale.setlocale(locale.LC_ALL, "fa_IR.UTF-8")
 
 USE_I18N = True
 USE_L10N = True  # defines whether a Django project should format numbers and dates according to project's locale
