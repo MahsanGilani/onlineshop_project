@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 
+admin.sites.AdminSite.site_header = 'پنل مدیریت جنگو'
 
 # Register your models here.
 @admin.register(Category)
