@@ -33,7 +33,7 @@ class Category(BaseModel):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.category_name)
+            self.slug = slugify(self.category_name, allow_unicode=True)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -65,7 +65,7 @@ class Product(BaseModel):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.product_name)
+            self.slug = slugify(self.product_name, allow_unicode=True)
         super().save(*args, **kwargs)
 
     class Meta:
