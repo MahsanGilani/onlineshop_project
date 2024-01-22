@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.text import slugify
 from apps.core.models import BaseModel
-
+from django.urls import reverse
 
 # Manger
 class ProductManger(models.Manager):
@@ -81,6 +81,9 @@ class Product(BaseModel):
     def __str__(self):
         return self.product_name
 
+    def get_absolute_url(self):
+        return reverse("products:product_detail", args=[self.id])
+    
 
 class Images(BaseModel):
     # data fields
