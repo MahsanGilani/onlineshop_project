@@ -16,7 +16,7 @@ class Category(BaseModel):
     category_name = models.CharField(max_length=100, verbose_name=_('Category Name'))
     category_image = models.ImageField(verbose_name=_('Category image'), upload_to='categories_img/', height_field=None,
                                        width_field=None, null=True, blank=True)
-    slug = models.SlugField(verbose_name=_('Slug'), max_length=250, unique=True, blank=True)
+    slug = models.SlugField(verbose_name=_('Slug'), max_length=250, unique=True, blank=True, allow_unicode=True)
 
     # relations
     sub_category = models.ForeignKey('self', verbose_name=_('Sub Categories'), on_delete=models.CASCADE,
@@ -51,7 +51,7 @@ class Product(BaseModel):
     video = models.FileField(upload_to='videos/', verbose_name=_('Product Video'), null=True, blank=True)
     is_active = models.BooleanField(verbose_name=_('Is Active'))
     description = models.TextField(verbose_name=_('Product Description'), null=True, blank=True)
-    slug = models.SlugField(verbose_name=_('Slug'), max_length=250, unique=True, blank=True)
+    slug = models.SlugField(verbose_name=_('Slug'), max_length=250, unique=True, blank=True, allow_unicode=True)
     thumbnail = models.ImageField(verbose_name=_('Product thumbnail'), upload_to='product_img/', height_field=None,
                                   width_field=None, null=True, blank=True)
 
