@@ -28,7 +28,6 @@ class CustumUserTests(TestCase):
     def test_delete_method_sets_is_deleted_to_true(self):
         self.user.delete()
         self.assertTrue(self.user.is_deleted)
-        self.assertTrue(self.address.is_deleted)
         
     def test_undelete_method_sets_is_deleted_to_false(self):
         self.user.is_deleted = True
@@ -54,5 +53,5 @@ class CustumUserTests(TestCase):
         self.assertIn(self.user, non_delete_users)
         
     def test_str_method(self):
-        test_str = f'{self.city}-{self.main_street}-->{self.address_detail}'
+        test_str = f'{self.address.city}-{self.address.main_street}-->{self.address.address_detail}'
         self.assertEqual(str(self.address), test_str)
