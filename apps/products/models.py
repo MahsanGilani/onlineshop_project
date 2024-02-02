@@ -91,3 +91,21 @@ class Images(BaseModel):
                               width_field=None)
     # relations
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, related_name='image_products', null=True)
+
+
+class Comment(BaseModel):
+    # data fields
+    comment_text = models.TextField(verbose_name=_('Comment Text'), max_length=500)
+    
+    # relations
+    sub_comment = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='sub_comments', verbose_name=_('Sub Comments'))
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='comments')
+    # user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = _('Comment')
+        verbose_name_plural = _('Comments')
+
+    def __str__(self):
+        return f'{self.user} : {self.content}'
+
