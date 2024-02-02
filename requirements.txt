@@ -9,12 +9,15 @@ click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.3.0
 colorama==0.4.6
+coverage==7.4.0
 Django==5.0.1
 django-debug-toolbar==4.2.0
 django-filter==23.5
+django-jalali==6.0.1
 djangorestframework==3.14.0
 environ==1.0
 idna==3.6
+jdatetime==4.1.1
 kombu==5.3.4
 Markdown==3.5.1
 pillow==10.2.0
